@@ -80,6 +80,7 @@ const Return = () => {
             className="inputTime"
             type="time"
             step="1"
+            format="yyyy-MM-dd HH:mm:ss"
           />
         </div>
 
