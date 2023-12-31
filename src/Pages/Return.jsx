@@ -71,7 +71,7 @@ const Return = () => {
   console.log(hours);
 
   return (
-    <>
+    <div>
       <form className="form" onSubmit={handleSubmit(onSubmit)}>
         <div className="containerInput">
           <label htmlFor="">Heure d'attaque </label>
@@ -118,7 +118,7 @@ const Return = () => {
           ? `${hours.heuresPo}heures ${hours.minutesPo}minutes ${hours.secondesPo}secondes`
           : ""}
       </p>
-    </>
+    </div>
   );
 };
 
