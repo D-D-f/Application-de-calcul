@@ -5,6 +5,7 @@ import { useForm } from "react-hook-form";
 import "./Home.css";
 import UseCalcule from "../../Hooks/Calcule";
 import Heures from "../../Component/Heures";
+import { useState } from "react";
 
 const Home = () => {
   const [setData, convertTime, times] = UseCalcule();
@@ -66,7 +67,7 @@ const Home = () => {
           />
         </div>
         {times.length !== 0 && <Heures heures={times} />}
-        <input type="submit" value="Calculer" />
+        <button type="submit">Calculer</button>
       </form>
     </div>
   );
