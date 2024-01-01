@@ -33,17 +33,19 @@ const UseCalcule = () => {
     const hours = parseInt(data?.heure, 10);
     const minutes = parseInt(data?.minute, 10);
     const seconds = parseInt(data?.seconde, 10);
-    const timeSeconds =
+    const timeSeconds = Math.ceil(
       hours * 3600 +
-      minutes * 60 +
-      seconds +
-      Number(baseNavale[data?.base_navale]) * Number(data?.distance);
+        minutes * 60 +
+        seconds +
+        baseNavale[data?.base_navale] * Number(data?.distance)
+    );
 
-    const timeSecondsWithPo =
+    const timeSecondsWithPo = Math.ceil(
       hours * 3600 +
-      minutes * 60 +
-      seconds +
-      (Math.ceil(baseNavale[data?.base_navale]) / 2) * Number(data?.distance);
+        minutes * 60 +
+        seconds +
+        (baseNavale[data?.base_navale] / 2) * Number(data?.distance)
+    );
 
     secondsInTime(timeSeconds);
     secondsInTime(timeSecondsWithPo);
@@ -52,7 +54,7 @@ const UseCalcule = () => {
   const secondsInTime = (seconds) => {
     const heures = Math.floor(seconds / 3600);
     const minutes = Math.floor((seconds % 3600) / 60);
-    const secondesRestantes = seconds % 60;
+    const secondesRestantes = Math.floor(seconds % 60);
 
     setTimes((current) => [
       ...current,
