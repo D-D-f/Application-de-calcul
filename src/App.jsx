@@ -1,10 +1,11 @@
 import "./App.css";
+import Home from "./Pages/Accueil/Home";
 import React from "react";
 
 const App = () => {
   return (
     <React.Fragment>
-      <h1></h1>
+      <Home />
     </React.Fragment>
   );
 };
