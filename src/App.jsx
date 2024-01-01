@@ -1,11 +1,11 @@
 import "./App.css";
-import Return from "./Pages/Return";
+import React from "react";
 
 const App = () => {
   return (
-    <div>
-      <Return />
-    </div>
+    <React.Fragment>
+      <h1></h1>
+    </React.Fragment>
   );
 };
 
