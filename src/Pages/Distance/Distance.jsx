@@ -1,0 +1,31 @@
+import {useForm} from "react-hook-form";
+import UseDistance from "../../Hooks/Distance.jsx";
+
+const Distance = () => {
+    const {calcDistance, distance} = UseDistance()
+    const {register, handleSubmit} = useForm();
+
+    const onSubmit = (d) => {
+        calcDistance(d)
+    }
+
+    return (
+        <form onSubmit={handleSubmit(onSubmit)}>
+            <div>
+                <label>Position du village a</label>
+                <input {...register("a")} min={"1"} type="number"/>
+                <input {...register("b")} min={"1"} type="number"/>
+            </div>
+            <div>
+                <label>Position du village b</label>
+                <input {...register("c")} min={"1"} type="number"/>
+                <input {...register("d")} min={"1"} type="number"/>
+            </div>
+
+            {distance !== "" ? <p>La distance est de : {distance}km </p> : ""}
+            <button type="submit">Calculer</button>
+        </form>
+    )
+}
+
+export default Distance;
