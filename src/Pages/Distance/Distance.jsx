@@ -9,6 +9,8 @@ const Distance = () => {
         calcDistance(d)
     }
 
+    console.log(distance)
+
     return (
         <form onSubmit={handleSubmit(onSubmit)}>
             <div>
@@ -22,7 +24,7 @@ const Distance = () => {
                 <input {...register("d")} min={"1"} type="number"/>
             </div>
 
-            {distance !== "" ? <p>La distance est de : {distance}km </p> : ""}
+            {distance !== undefined ? <p>La distance est de : {distance}km </p> : ""}
             <button type="submit">Calculer</button>
         </form>
     )
