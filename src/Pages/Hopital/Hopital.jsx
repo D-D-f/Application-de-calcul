@@ -1,8 +1,8 @@
 const Hopital = () => {
     return (
-        <div>
-            <h1>Hopital</h1>
-        </div>
+        <form>
+
+        </form>
     )
 }
 
