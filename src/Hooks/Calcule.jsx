@@ -52,9 +52,17 @@ const UseCalcule = () => {
   };
 
   const secondsInTime = (seconds) => {
-    const heures = Math.floor(seconds / 3600);
-    const minutes = Math.floor((seconds % 3600) / 60);
-    const secondesRestantes = Math.floor(seconds % 60);
+    let heures = Math.floor(seconds / 3600);
+    let minutes = Math.floor((seconds % 3600) / 60);
+    let secondesRestantes = Math.floor(seconds % 60);
+
+    if(heures < 10) {
+      heures = `0${heures}`;
+    } else if (minutes < 10) {
+      minutes = `0${minutes}`
+    } else if (secondesRestantes < 10) {
+      secondesRestantes = `0${secondesRestantes}`
+    }
 
     setTimes((current) => [
       ...current,
