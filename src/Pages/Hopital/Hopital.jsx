@@ -32,6 +32,8 @@ const Hopital = () => {
         } else if (secondesRestantes < 10) {
             secondesRestantes = `0${secondesRestantes}`
         }
+
+        console.log(minutes)
         setTimeHopital(current => [...current, {h: heures, m: minutes, s: secondesRestantes}])
     }
 
