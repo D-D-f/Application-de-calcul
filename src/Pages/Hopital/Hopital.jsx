@@ -33,11 +33,8 @@ const Hopital = () => {
             secondesRestantes = `0${secondesRestantes}`
         }
 
-        console.log(minutes)
         setTimeHopital(current => [...current, {h: heures, m: minutes, s: secondesRestantes}])
     }
-
-    console.log(timeHopital)
 
     return (
         <form onSubmit={handleSubmit(onSubmit)}>
