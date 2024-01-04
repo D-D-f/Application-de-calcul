@@ -1,0 +1,13 @@
+.position {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.position_input {
+    padding: 5px;
+    outline: none;
+    margin-right: 10px;
+}

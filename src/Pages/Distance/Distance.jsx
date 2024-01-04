@@ -1,5 +1,6 @@
 import {useForm} from "react-hook-form";
 import UseDistance from "../../Hooks/Distance.jsx";
+import "./Distance.css";
 
 const Distance = () => {
     const {calcDistance, distance} = UseDistance()
@@ -13,19 +14,23 @@ const Distance = () => {
 
     return (
         <form onSubmit={handleSubmit(onSubmit)}>
-            <div>
+            <div className={"position"}>
                 <label>Position du village a</label>
-                <input {...register("a")} min={"0"} type="number"/>
-                <input {...register("b")} min={"0"} type="number"/>
+                <div>
+                    <input className={"position_input"} {...register("a")} min={"0"} type="number"/>
+                    <input className={"position_input"} {...register("b")} min={"0"} type="number"/>
+                </div>
             </div>
-            <div>
+            <div className={"position"}>
                 <label>Position du village b</label>
-                <input {...register("c")} min={"0"} type="number"/>
-                <input {...register("d")} min={"0"} type="number"/>
+                <div>
+                    <input className={"position_input"} {...register("c")} min={"0"} type="number"/>
+                    <input className={"position_input"} {...register("d")} min={"0"} type="number"/>
+                </div>
             </div>
 
             {distance !== undefined ? <p>La distance est de : {distance}km </p> : ""}
-            <button type="submit">Calculer</button>
+            <button className={"button"} type="submit">Calculer</button>
         </form>
     )
 }
