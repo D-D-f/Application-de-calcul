@@ -1,6 +1,7 @@
 import UseCalcule from "../../Hooks/Calcule.jsx";
 import {useForm} from "react-hook-form";
 import Heures from "../../Component/Heures.jsx";
+import "./Retour.css";
 
 const Retour = () => {
     const [setData, convertTime, times] = UseCalcule();
@@ -11,10 +12,10 @@ const Retour = () => {
         convertTime(data);
     };
     return (
-        <form onSubmit={handleSubmit(onSubmit)}>
+        <form className={"form_retour"} onSubmit={handleSubmit(onSubmit)}>
             <div className="block_input">
                 <label>Heure d'attaque</label>
-                <div>
+                <div className={"input_retour"}>
                     <input
                         {...register("heure")}
                         className="time"
@@ -60,7 +61,7 @@ const Retour = () => {
                 />
             </div>
             {times.length !== 0 && <Heures heures={times}/>}
-            <button type="submit">Calculer</button>
+            <button className={"button"} type="submit">Calculer</button>
         </form>
     )
 }

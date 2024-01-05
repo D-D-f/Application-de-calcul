@@ -1,0 +1,21 @@
+.form_retour {
+    display: flex;
+}
+
+
+.block_input {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.basenavale, .km {
+    padding: 5px;
+}
+
+
+.time {
+    padding: 5px;
+    width: 50px;
+}

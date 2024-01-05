@@ -6,6 +6,8 @@
   background-color: #9e91c1;
   border-radius: 20px;
   padding: 20px;
+  display: flex;
+  flex-direction: column;
 }
 
 .home form {
