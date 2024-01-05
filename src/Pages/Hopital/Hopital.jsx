@@ -1,5 +1,6 @@
 import {useForm} from "react-hook-form";
 import {useState} from "react";
+import "./Hopital.css";
 
 const Hopital = () => {
     const [timeHopital, setTimeHopital] = useState([])
@@ -37,24 +38,24 @@ const Hopital = () => {
     }
 
     return (
-        <form onSubmit={handleSubmit(onSubmit)}>
-            <div>
-                <label >Heure du jeu</label>
+        <form className={"form_hopital"} onSubmit={handleSubmit(onSubmit)}>
+            <div className={"block_hopital"}>
+                <label>Heure du jeu</label>
                 <div>
-                    <input {...register('heures')} min={"0"} max={"23"} type="number"/><span>:</span><input {...register('minutes')} min={"0"} max={"59"} type="number" /><span>:</span><input {...register('secondes')} min={"0"} max={"59"} type="number" />
+                    <input className="time"  {...register('heures')} min={"0"} max={"23"} type="number"/><span>:</span><input className="time" {...register('minutes')} min={"0"} max={"59"} type="number" /><span>:</span><input className="time" {...register('secondes')} min={"0"} max={"59"} type="number" />
                 </div>
             </div>
-            <div>
+            <div className={"block_hopital"}>
                 <label>Temps restant sur l'hôpital</label>
                 <div>
-                    <input {...register('heure')} min={"0"} max={"23"} type="number"/><span>:</span><input {...register('minute')} min={"0"} max={"59"} type="number"/><span>:</span><input
-                    {...register('seconde')} min={"0"} max={"59"} type="number"/>
+                    <input className="time"  {...register('heure')} min={"0"} max={"23"} type="number"/><span>:</span><input className="time" {...register('minute')} min={"0"} max={"59"} type="number"/><span>:</span><input
+                    className="time" {...register('seconde')} min={"0"} max={"59"} type="number"/>
                 </div>
             </div>
 
             {timeHopital.length !== 0 && <p>Heure d'attaque: {timeHopital[timeHopital.length -1].h}:{timeHopital[timeHopital.length -1].m}:{timeHopital[timeHopital.length -1].s}</p>}
 
-            <button type={"submit"}>Calculer</button>
+            <button className={"button"} type={"submit"}>Calculer</button>
         </form>
     )
 }

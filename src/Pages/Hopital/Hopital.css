@@ -1,0 +1,12 @@
+.form_hopital {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.block_hopital {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
