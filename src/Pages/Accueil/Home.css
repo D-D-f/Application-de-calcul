@@ -17,18 +17,16 @@
   justify-content: space-around;
 }
 
-.home .time {
-  width: 50px;
-}
 
 .home .basenavale,
 .home .km {
-  width: 100px;
+  width: 50%;
 }
 
 .block_input {
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 
 @media screen and (max-width: 1000px) {

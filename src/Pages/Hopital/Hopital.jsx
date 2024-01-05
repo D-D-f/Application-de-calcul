@@ -41,13 +41,13 @@ const Hopital = () => {
         <form className={"form_hopital"} onSubmit={handleSubmit(onSubmit)}>
             <div className={"block_hopital"}>
                 <label>Heure du jeu</label>
-                <div>
+                <div className={'div_hopital'}>
                     <input className="time"  {...register('heures')} min={"0"} max={"23"} type="number"/><span>:</span><input className="time" {...register('minutes')} min={"0"} max={"59"} type="number" /><span>:</span><input className="time" {...register('secondes')} min={"0"} max={"59"} type="number" />
                 </div>
             </div>
             <div className={"block_hopital"}>
                 <label>Temps restant sur l'hôpital</label>
-                <div>
+                <div className={"div_hopital"}>
                     <input className="time"  {...register('heure')} min={"0"} max={"23"} type="number"/><span>:</span><input className="time" {...register('minute')} min={"0"} max={"59"} type="number"/><span>:</span><input
                     className="time" {...register('seconde')} min={"0"} max={"59"} type="number"/>
                 </div>
