@@ -7,16 +7,23 @@ const Heures = ({ heures }) => {
     <div>
       <p>
         Heure d'arrivée sans PO :{" "}
-        {`${heures[heures.length - 2].heure}:${
-          heures[heures.length - 2].minute
-        }:${heures[heures.length - 2].secondes}`}
+          <button onClick={() => navigator.clipboard.writeText(`Heure d'arrivée sans PO : ${heures[heures.length - 2].heure}:${
+              heures[heures.length - 2].minute
+          }:${heures[heures.length - 2].secondes}`)}>
+              {`${heures[heures.length - 2].heure}:${
+                  heures[heures.length - 2].minute
+              }:${heures[heures.length - 2].secondes}`}
+          </button>
       </p>
-      <p>
+
         Heure d'arrivée avec PO :{" "}
-        {`${heures[heures.length - 1].heure}:${
-          heures[heures.length - 1].minute
-        }:${heures[heures.length - 1].secondes}`}
-      </p>
+          <button onClick={() => navigator.clipboard.writeText(`Heure d'arrivée avec PO : ${heures[heures.length - 1].heure}:${
+              heures[heures.length - 1].minute
+          }:${heures[heures.length - 1].secondes}`)}>
+              {`${heures[heures.length - 1].heure}:${
+                  heures[heures.length - 1].minute
+              }:${heures[heures.length - 1].secondes}`}
+          </button>
     </div>
   );
 };
