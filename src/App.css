@@ -8,3 +8,7 @@
     color: white;
 }
 
+.btn_retour {
+    padding: 5px;
+    cursor: pointer;
+}

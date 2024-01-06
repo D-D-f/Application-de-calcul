@@ -7,7 +7,7 @@ const Heures = ({ heures }) => {
     <div>
       <p>
         Heure d'arrivée sans PO :{" "}
-          <button onClick={() => navigator.clipboard.writeText(`Heure d'arrivée sans PO : ${heures[heures.length - 2].heure}:${
+          <button className={"btn_retour"} onClick={() => navigator.clipboard.writeText(`Heure d'arrivée sans PO : ${heures[heures.length - 2].heure}:${
               heures[heures.length - 2].minute
           }:${heures[heures.length - 2].secondes}`)}>
               {`${heures[heures.length - 2].heure}:${
@@ -17,7 +17,7 @@ const Heures = ({ heures }) => {
       </p>
 
         Heure d'arrivée avec PO :{" "}
-          <button onClick={() => navigator.clipboard.writeText(`Heure d'arrivée avec PO : ${heures[heures.length - 1].heure}:${
+          <button className={"btn_retour"} onClick={() => navigator.clipboard.writeText(`Heure d'arrivée avec PO : ${heures[heures.length - 1].heure}:${
               heures[heures.length - 1].minute
           }:${heures[heures.length - 1].secondes}`)}>
               {`${heures[heures.length - 1].heure}:${
