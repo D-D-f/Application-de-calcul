@@ -58,9 +58,11 @@ const UseCalcule = () => {
 
     if(heures < 10) {
       heures = `0${heures}`;
-    } else if (minutes < 10) {
+    }
+    if (minutes < 10) {
       minutes = `0${minutes}`
-    } else if (secondesRestantes < 10) {
+    }
+    if (secondesRestantes < 10) {
       secondesRestantes = `0${secondesRestantes}`
     }
 
