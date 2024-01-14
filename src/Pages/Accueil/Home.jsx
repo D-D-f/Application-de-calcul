@@ -11,6 +11,8 @@ const Home = () => {
     <div className="home">
         <Navigation />
       <Path />
+
+        <p className="name">By Kurama</p>
     </div>
   );
 };
