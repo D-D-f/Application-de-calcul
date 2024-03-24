@@ -18,11 +18,11 @@ const baseNavale = {
   13: 85,
   14: 77,
   15: 69,
-  16: 55,
-  17: 37,
-  18: 23,
-  19: 13,
-  20: 7,
+  16: 61,
+  17: 51,
+  18: 41,
+  19: 31,
+  20: 21,
 };
 
 const UseCalcule = () => {
@@ -56,14 +56,14 @@ const UseCalcule = () => {
     let minutes = Math.floor((seconds % 3600) / 60);
     let secondesRestantes = Math.floor(seconds % 60);
 
-    if(heures < 10) {
+    if (heures < 10) {
       heures = `0${heures}`;
     }
     if (minutes < 10) {
-      minutes = `0${minutes}`
+      minutes = `0${minutes}`;
     }
     if (secondesRestantes < 10) {
-      secondesRestantes = `0${secondesRestantes}`
+      secondesRestantes = `0${secondesRestantes}`;
     }
 
     setTimes((current) => [
